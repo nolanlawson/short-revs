@@ -1,0 +1,29 @@
+{
+  "name": "short-revs",
+  "version": "1.0.0",
+  "description": "shorten the revisions in a pouchdb-dump stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --grep=$GREP test/test.js",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha test/test.js && istanbul check-coverage --lines 100 --function 100 --statements 100 --branches 100"
+  },
+  "dependencies": {
+    "base64int": "^1.1.0",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.0.2",
+    "chai": "^3.4.0",
+    "istanbul": "^0.4.0",
+    "memdown": "^1.1.0",
+    "memorystream": "^0.3.1",
+    "mocha": "^2.3.3",
+    "pouchdb": "^5.0.0",
+    "pouchdb-load": "^1.4.1",
+    "pouchdb-replication-stream": "^1.2.5",
+    "stream-to-promise": "^1.0.4"
+  },
+  "keywords": [],
+  "author": "Nolan Lawson <nolan@nolanlawson.com>",
+  "license": "Apache-2.0"
+}
