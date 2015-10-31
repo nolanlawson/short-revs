@@ -1,4 +1,4 @@
-short-revs
+short-revs [![Build Status](https://travis-ci.org/nolanlawson/short-revs.svg?branch=master)](https://travis-ci.org/nolanlawson/short-revs)
 ====
 
 Shorten the revs in a stream from `pouchdb-replication-stream` (or a dump from `pouchdb-dump-cli`).
