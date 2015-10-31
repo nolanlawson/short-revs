@@ -1,5 +1,5 @@
 short-revs
-----
+====
 
 Shorten the revs in a stream from `pouchdb-replication-stream` (or a dump from `pouchdb-dump-cli`).
 
@@ -24,28 +24,7 @@ Usage
 
 This module can be used via JavaScript or the command line.
 
-JavaScript:
-
-```
-npm install short-revs
-```
-
-
-In JavaScript:
-
-```js
-// db is a PouchDB with pouchdb-replication-stream set up
-var db = ...
-
-// stream is some stream
-var stream = ...
-
-// transform the stream
-var shortRevs = require('short-revs');
-db.dump(stream).pipe(shortRevs()).pipe(fs.createWriteStream('out.txt'));
-```
-
-Command line:
+### Via the command line
 
 ```
 npm install -g short-revs
@@ -54,6 +33,26 @@ npm install -g short-revs
 ```
 short-revs < dumpfile.txt > smaller_dumpfile.txt
 ```
+
+### Via JavaScript
+
+```
+npm install short-revs
+```
+
+```js
+// db is a PouchDB with pouchdb-replication-stream set up
+var db = ...
+
+// stream is a stream
+var stream = ...
+
+// transform the stream
+var shortRevs = require('short-revs');
+db.dump(stream).pipe(shortRevs());
+```
+
+(See the tests for more example usages, including dumping to in-memory.)
 
 In the browser
 ----
