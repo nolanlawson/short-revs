@@ -18,6 +18,8 @@ var should = require('chai').should();
 
 describe('main test suite', function () {
 
+  this.timeout(30000);
+
   var db;
   var targetDB;
 
@@ -117,6 +119,26 @@ describe('main test suite', function () {
     });
   });
 
+  it('should transform a large dump', function () {
+    var docs = [];
+    for (var i = 0; i < 1000; i++) {
+      docs.push({_id: '000' + i});
+    }
+
+    return db.bulkDocs(docs).then(function () {
+      var stream = new MemoryStream();
+      stream = stream.pipe(shortRevs());
+      var promise = stream2promise(stream);
+      return db.dump(stream).then(function () {
+        return promise;
+      }).then(function (res) {
+        var json = res.toString('utf-8');
+        should.exist(json);
+        return targetDB.loadIt(json).then(checkDBsEqual);
+      });
+    });
+  });
+
   it('should transform a conflicty dump', function () {
     var docs = [
       {
@@ -152,7 +174,7 @@ describe('main test suite', function () {
     });
   });
 
-  it('should transform a conflicty dump2', function () {
+  it('should transform a conflicty dump 2', function () {
     var docs = [
       {
         _id: 'fubar',
