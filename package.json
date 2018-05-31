@@ -34,5 +34,13 @@
     "shorten"
   ],
   "author": "Nolan Lawson <nolan@nolanlawson.com>",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nolanlawson/short-revs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nolanlawson/short-revs/issues"
+  },
+  "homepage": "https://github.com/nolanlawson/short-revs#readme"
 }
