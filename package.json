@@ -1,6 +1,6 @@
 {
   "name": "short-revs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "shorten the revisions in a pouchdb-dump stream",
   "main": "index.js",
   "scripts": {
