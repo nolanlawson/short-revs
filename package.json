@@ -42,5 +42,6 @@
   "bugs": {
     "url": "https://github.com/nolanlawson/short-revs/issues"
   },
-  "homepage": "https://github.com/nolanlawson/short-revs#readme"
+  "homepage": "https://github.com/nolanlawson/short-revs#readme",
+  "files": ["bin"]
 }
