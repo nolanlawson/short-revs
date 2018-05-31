@@ -37,13 +37,16 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nolanlawson/short-revs.git"
+    "url": "git+https://github.com/pouchdb-community/short-revs.git"
   },
   "bugs": {
-    "url": "https://github.com/nolanlawson/short-revs/issues"
+    "url": "https://github.com/pouchdb-community/short-revs/issues"
   },
-  "homepage": "https://github.com/nolanlawson/short-revs#readme",
+  "homepage": "https://github.com/pouchdb-community/short-revs#readme",
   "files": [
     "bin"
-  ]
+  ],
+  "directories": {
+    "test": "test"
+  }
 }
